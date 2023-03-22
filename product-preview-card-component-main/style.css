@@ -1,0 +1,160 @@
+:root {
+  --primary: hsl(158, 36%, 37%);
+  --bg: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+  --darkBlue: hsl(212, 21%, 14%);
+  --graysblue: hsl(228, 12%, 48%);
+  --f_fraunces: "Fraunces", serif;
+  --f_montserrat: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: var(--f_montserrat);
+  font-size: 14px;
+  min-height: 100%vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin: 30px auto;
+  padding: 0px 30px;
+}
+
+.card-component {
+  max-width: 700px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.card-img img {
+  max-width: 100%;
+  display: inherit;
+}
+
+.card-detail {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2.3rem;
+}
+
+.category-name {
+  letter-spacing: 0.5rem;
+  color: var(--graysblue);
+}
+
+.item-name {
+  font-family: var(--f_fraunces);
+  font-weight: 700;
+  font-size: 2.7rem;
+  line-height: 2.5rem;
+}
+
+.item-detail {
+  color: var(--graysblue);
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+}
+
+.current-price {
+  font-family: var(--f_fraunces);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.old-price {
+  color: var(--graysblue);
+  text-decoration: line-through;
+}
+
+.btn-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-colour ease 0.5s;
+}
+
+.btn-cta:hover {
+  background-color: hsl(158, 44%, 32%);
+}
+
+.btn-cta img {
+  color: white;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 826px) {
+  .card-component {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .card-img img {
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .category-name,
+  .item-name,
+  .item-detail,
+  .prices {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .card-component {
+    max-width: 300px;
+  }
+  .card-img img {
+    max-height: 300px;
+    width: 100%;
+  }
+  .category-name {
+    font-size: 12px;
+    margin-bottom: 0.7rem;
+  }
+  .item-name {
+    font-size: 25px;
+    line-height: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+  .item-detail {
+    line-height: 1.5rem;
+    margin-bottom: 0.7rem;
+    font-size: 13px;
+  }
+  h1 .current-price {
+    font-size: 25px;
+  }
+  .btn-cta {
+    font-size: 14px;
+  }
+}
