@@ -29,11 +29,14 @@ Desktop: 1440px */
   --Very_paleblue: hsl(225, 100%, 98%);
   --Desaturated_blue: hsl(224, 23%, 55%);
   --Dark_blue: hsl(223, 47%, 23%);
+  --f_poppins: "Poppins", sans-serif;
+  --f_redhat: "Red Hat Display", sans-serif;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--f_poppins);
 }
 
 body {
@@ -49,16 +52,14 @@ body {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 22em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
-  background-color: var(--Very_paleblue);
-
-  border: 1px solid red;
+  background-color: #fff;
 }
 
 .hero-img img {
@@ -70,14 +71,88 @@ body {
   padding: 2rem;
 }
 
+.title-detail {
+  font-family: var(--f_poppins);
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  color: var(--Dark_blue);
+}
+.detail p {
+  font-family: var(--f_poppins);
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--Desaturated_blue);
+}
+
 .section-plan {
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  max-height: 70px;
+  width: 100%;
+  padding: 0.5em;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: var(--Very_paleblue);
 }
 
-.anual-plan {
+.lef-section {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 140px;
+}
+
+.section-plan .link {
+  color: var(--birght_blue);
+  text-decoration: underline;
+  font-weight: 600;
+  margin: 0;
+}
+.anual-plan {
+  line-height: 10px;
+  margin: 0;
+}
+.anual-plan h2 {
+  color: var(--Dark_blue);
+  font-size: 14px;
+  margin: 0;
+}
+.anual-plan p {
+  margin: 0;
+}
+
+button {
+  width: 100%;
+  min-height: 2.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--birght_blue);
+  color: #fff;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 8px 15px hsla(0, 0%, 0%, 0.1);
+}
+
+.detail .btn-cancel {
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    width: 100%;
+    background-color: hsl(225, 100%, 94%);
+  }
+  .card-component {
+    max-width: 230px;
+  }
 }
