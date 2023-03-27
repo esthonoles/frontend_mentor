@@ -124,8 +124,15 @@ main {
 }
 
 @media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
   .card {
     display: flex;
     flex-direction: column;
+  }
+
+  .card p {
+    margin-bottom: 50px;
   }
 }
