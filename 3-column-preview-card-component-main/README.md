@@ -2,7 +2,7 @@
 
 ![Design preview for the 3-column preview card component coding challenge](./design/desktop-preview.jpg)
 
-Link : https://splendorous-travesseiro-3b58a2.netlify.app/
+Link : https://sprightly-queijadas-fee313.netlify.app/
 
 ## Welcome! 👋
 
